@@ -19,7 +19,7 @@
     "enablePullDownRefresh": true,
     "onReachBottomDistance": 100,
     "navigationBarBackgroundColor": "#1296db",
-    "navigationBarTitleText": "#1296db",
+    "navigationBarTitleText": "MMovie",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
@@ -31,6 +31,12 @@
         "text": "首页",
         "iconPath": "./icons/电影.png",
         "selectedIconPath": "./icons/电影 (1).png"
+      },
+      {
+        "pagePath": "pages/classify/index",
+        "text": "分类",
+        "iconPath": "./icons/分类.png",
+        "selectedIconPath": "./icons/分类 (1).png"
       },
       {
         "pagePath": "pages/me/index",

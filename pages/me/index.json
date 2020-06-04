@@ -3,7 +3,7 @@
     "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog"
   },
   "backgroundTextStyle": "light",
-  "navigationBarBackgroundColor": "#fff",
+  "navigationBarBackgroundColor": "#1296db",
   "navigationBarTitleText": "个人中心",
   "navigationBarTextStyle": "black"
 }

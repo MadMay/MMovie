@@ -103,6 +103,13 @@
 					"id": -1,
 					"name": "pages/history/index",
 					"pathName": "pages/history/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/classify/index",
+					"pathName": "pages/classify/index",
 					"scene": null
 				}
 			]

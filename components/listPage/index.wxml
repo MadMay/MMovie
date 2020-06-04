@@ -1,0 +1,29 @@
+<!--components/listPage/index.wxml-->
+<view class="film">
+  <view class="item-opt">
+    <view class="item-title">{{type}}</view>
+    <view class="viewMore">
+      <text style="font-weight:500;margin-right:10rpx">查看更多</text>
+      <text>></text>
+    </view>
+  </view>
+  <scroll-view class="cardArea" catchtouchmove="true" scroll-x scroll-y>
+    <navigator 
+    url="/pages/detail/index?wd={{item.vod_name}}"
+    class="cardItem" 
+    wx:for="{{filmList}}" 
+    wx:key="item.vod_id" 
+    bindtap="goDetail" 
+    data-name="{{item.vod_name}}">
+      <van-image
+        lazy-load
+        width="100%"
+        height="210rpx"
+        fit="cover"
+        image-class="imgClass"
+        src="{{item.vod_pic}}"
+      />
+      <text class="videoTitle">{{item.vod_name}}</text>
+    </navigator>
+  </scroll-view>
+</view>

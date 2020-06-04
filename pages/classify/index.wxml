@@ -1,2 +1,28 @@
 <!--pages/classify/index.wxml-->
-<text>pages/classify/index.wxml</text>
+<view class="classify">
+  <van-tabs 
+  active="{{ active }}" 
+  swipeable
+  swipe-threshold="4"
+  color="#1296db"
+  title-style="titleStyle"
+  tab-class="tabClass"
+  tab-active-class="activeClass"
+  nav-class="navClass"
+  >
+    <van-tab title="电影">
+      <card filmList="{{fightFilm}}" type="{{fight}}"></card>
+      <card filmList="{{comedyFilm}}" type="{{comedy}}"></card>
+      <card filmList="{{loveFilm}}" type="{{love}}"></card>
+      <card filmList="{{sciencFilm}}" type="{{scienc}}"></card>
+      <card filmList="{{terrorFilm}}" type="{{terror}}"></card>
+      <card filmList="{{strangeFilm}}" type="{{strange}}"></card>
+      <card filmList="{{featureFilm}}" type="{{feature}}"></card>
+    </van-tab>
+    <van-tab title="电视剧">内容 2</van-tab>
+    <van-tab title="动漫">内容 3</van-tab>
+    <van-tab title="综艺">内容 4</van-tab>
+    <van-tab title="纪录片">内容 5</van-tab>
+    <van-tab title="战争片">内容 6</van-tab>
+  </van-tabs>
+</view>
