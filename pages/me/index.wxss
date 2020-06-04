@@ -1,0 +1,95 @@
+page {
+  background-color: #f5f7f9;
+}
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.image_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  border-bottom: 1rpx solid #ccc;
+  background-color: #fff;
+}
+.image_box .box_image {
+  width: 180rpx;
+  height: 180rpx;
+  overflow: hidden;
+  padding-bottom: 20rpx;
+}
+.image_box .box_image image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.image_box .box_text {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+.main_box {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+.main_box .collect_box,
+.main_box .history_box {
+  border-bottom: 1rpx solid #ccc;
+  height: 10vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main_box .collect_box .left,
+.main_box .history_box .left {
+  font-size: 34rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 600;
+}
+.header {
+  margin: 90rpx 0 90rpx 50rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  width: 650rpx;
+  height: 300rpx;
+  line-height: 450rpx;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.content {
+  margin-left: 50rpx;
+  margin-bottom: 90rpx;
+}
+
+.content text {
+  display: block;
+  color: #9d9d9d;
+  margin-top: 40rpx;
+}
+
+.bottom {
+  border-radius: 80rpx;
+  margin: 70rpx 50rpx;
+  font-size: 35rpx;
+}
+.imgIcon{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+}
+
+  
+  

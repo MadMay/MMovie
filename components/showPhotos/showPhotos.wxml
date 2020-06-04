@@ -1,0 +1,24 @@
+<view class="main" style="{{Marginstyle}}">
+<view wx:if="{{isHis==false}}" class="zmark">
+	<navigator  bindlongpress="longTap"  url="/pages/detail/index?wd={{item.vod_name}}" class="main_item" wx:for="{{collectionList}}" wx:key="vod_id" data-wd="{{item.vod_name}}">
+		<view class="item_image">
+			<image mode="scaleToFill" src="{{item.vod_pic}}"></image>
+			<view class="item_con">{{item.vod_continu}}</view>
+		</view>
+			<view class="item_text">
+			<text class="filmText">{{item.vod_name}}</text>
+		</view>
+	</navigator>
+</view>
+<view  wx:else class="zmark">
+	<navigator url="/pages/play/index?url={{item.url}}&wd={{item.vod_name}}&name={{item.level}}&hisTime={{item.hisTime}}&isHis=true" class="main_item" wx:for="{{collectionList}}" wx:key="vod_id" data-wd="{{item.vod_name}}" data-hisTime="{{item.hisTime}}">
+		<view class="item_image">
+			<image mode="scaleToFill" src="{{item.vod_pic}}"></image>
+			<view class="item_con">{{item.vod_continu}}</view>
+		</view>
+			<view class="item_text">
+			<text>{{item.vod_name+item.level}}</text>
+		</view>
+	</navigator>
+	</view>
+</view>

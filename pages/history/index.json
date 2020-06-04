@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "photos":"../../components/showPhotos/showPhotos",
+    "van-button": "@vant/weapp/button/index"
+  }, 
+  "navigationBarTitleText": "历史播放记录"
+}

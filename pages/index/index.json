@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "photos":"../../components/showPhotos/showPhotos"
+    
+  },
+  "navigationBarTitleText": "首页"
+}

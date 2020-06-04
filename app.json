@@ -1,0 +1,43 @@
+{
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/me/index",
+    "pages/search/index",
+    "pages/detail/index",
+    "pages/play/index",
+    "pages/history/index",
+    "pages/collection/index",
+    "pages/logs/logs",
+    "pages/classify/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true,
+    "onReachBottomDistance": 100,
+    "navigationBarBackgroundColor": "#1296db",
+    "navigationBarTitleText": "#1296db",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./icons/电影.png",
+        "selectedIconPath": "./icons/电影 (1).png"
+      },
+      {
+        "pagePath": "pages/me/index",
+        "text": "我的",
+        "iconPath": "./icons/我的.png",
+        "selectedIconPath": "./icons/我的 (1).png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+video{
+  width: 100%;
+}
+.countinu{
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  padding:5rpx 10rpx;
+  display: flex;
+  align-items: center;
+  width: 290rpx;
+  height: 40rpx;
+  font-size: 20rpx;
+  justify-content: center;
+  border-radius: 4rpx;
+  bottom: 80rpx;
+  left: 86rpx;
+}
+.texttip{
+  display: inline-block;
+  font-size: 20rpx;
+  color:#fff;
+}
+.hisPlay{
+  position: relative;
+}
+.rate{
+  position: absolute;
+  width: 100rpx;
+  height: auto;
+  font-size: 22rpx;
+  text-align: center;
+  display:box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+  top:21%;
+  right:-100rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6);
+}
+.rateBtn{
+  position: absolute;
+  width: 100rpx;
+  height: 60rpx;
+  font-size: 22rpx;
+  display:box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+  text-align: center;
+  right: 0rpx;
+  right:-100rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  top:40%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.6);
+}
+.numb{
+  font-size: 24rpx;
+  color:#fff;
+  width: 90rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top-left-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  display:box;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,47 @@
+
+
+<view wx:if="{{isLogin}}"> 
+	<view class="image_box" >
+		<view class="box_image">
+			<image mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+		</view>
+		<view class="box_text">{{userInfo.nickName}}</view>
+	</view>
+	<view class="main_box">
+		<navigator class="history_box" url="/pages/history/index">
+			<view class="left">
+				<image class="imgIcon"  mode="widthFix" src="../../icons/历史记录 (1).png"></image>
+				<text>观看历史</text> 
+			</view>
+			<text class="iconfont icon-icon-test"></text>
+		</navigator>
+		<navigator class="collect_box" url="/pages/collection/index">
+			<view class="left">
+				<image class="imgIcon"  mode="widthFix" src="../../icons/收藏.png"></image>
+				<text>我的看单</text> 
+			</view>
+			<text class="iconfont icon-icon-test"></text>
+		</navigator>
+		<view class="collect_box logout" bindtap="logOut">
+			<view class="left">
+				<image class="imgIcon"  mode="widthFix" src="../../icons/退出.png"></image>
+				<text>退出账号</text> 
+			</view>
+		</view>
+		
+	</view>
+</view>
+<view wx:else>
+    <view class='header'>
+        <image src='../../icons/title.jpg'></image>
+    </view>
+ 
+    <view class='content'>
+        <view>申请获取以下权限</view>
+        <text>获得你的公开信息(昵称，头像等)</text>
+    </view>
+ 
+    <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+        授权登录
+    </button>
+</view>

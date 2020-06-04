@@ -1,0 +1,37 @@
+<view>
+    <van-search
+        class="cancel-class"
+        value="{{inputVal}}"    
+        placeholder="请输入搜索关键词"
+        show-action
+        shape="round"
+        focus
+        custom-class="rootClass"
+        cancel-class="cancel"
+        background="#1296db"
+        bind:clear="handleCancel"
+        bind:search="changeInput"
+        bind:cancel="handleCancel"
+        />
+    <view class="main" style="padding-top:108rpx">
+        <navigator url="/pages/detail/index?wd={{item.vod_name}}" class="main_item" wx:for="{{searchData}}" wx:key="vod_id">
+            <view class="item_image">
+               <image mode="scaleToFill" src="{{item.vod_pic}}"> </image>
+            </view>
+            <view class="item_text">
+                <view >片名：<text style="color:red">{{item.vod_name}}</text> </view>
+                  <view >剧集：{{item.vod_continu}}</view>
+                    <view >类型：{{item.list_name}}</view>
+                    <view>上映时间：{{item.vod_year}}</view>                  
+            </view>
+        </navigator>
+    </view>
+    
+        <van-divider wx:if="{{getMore}}"
+        contentPosition="center"
+        customStyle="color: #1989fa; border-color: #1989fa; font-size: 26rpx;"
+        >
+        {{tips}}
+        </van-divider>
+  
+</view> 
