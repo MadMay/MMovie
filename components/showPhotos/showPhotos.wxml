@@ -2,7 +2,15 @@
 <view wx:if="{{isHis==false}}" class="zmark">
 	<navigator  bindlongpress="longTap"  url="/pages/detail/index?wd={{item.vod_name}}" class="main_item" wx:for="{{collectionList}}" wx:key="vod_id" data-wd="{{item.vod_name}}">
 		<view class="item_image">
-			<image mode="scaleToFill" src="{{item.vod_pic}}"></image>
+			<!-- <image mode="scaleToFill" src="{{item.vod_pic}}"></image> -->
+			<van-image
+        lazy-load
+        width="100%"
+        height="100%"
+        fit="cover"
+        image-class="imgClass"
+        src="{{item.vod_pic}}"
+      />
 			<view class="item_con">{{item.vod_continu}}</view>
 		</view>
 			<view class="item_text">

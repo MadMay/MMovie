@@ -12,12 +12,13 @@
     "pages/history/index",
     "pages/collection/index",
     "pages/logs/logs",
-    "pages/classify/index"
+    "pages/classify/index",
+    "pages/classifyDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "enablePullDownRefresh": true,
-    "onReachBottomDistance": 100,
+    "onReachBottomDistance": 40,
     "navigationBarBackgroundColor": "#1296db",
     "navigationBarTitleText": "MMovie",
     "navigationBarTextStyle": "black"

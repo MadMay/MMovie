@@ -1,28 +1,48 @@
 <!--pages/classify/index.wxml-->
 <view class="classify">
   <van-tabs 
-  active="{{ active }}" 
-  swipeable
+  active="{{active}}" 
+  swipeable sticky
   swipe-threshold="4"
   color="#1296db"
   title-style="titleStyle"
   tab-class="tabClass"
   tab-active-class="activeClass"
   nav-class="navClass"
+  bind:change="loadOtherData"
   >
     <van-tab title="电影">
-      <card filmList="{{fightFilm}}" type="{{fight}}"></card>
-      <card filmList="{{comedyFilm}}" type="{{comedy}}"></card>
-      <card filmList="{{loveFilm}}" type="{{love}}"></card>
-      <card filmList="{{sciencFilm}}" type="{{scienc}}"></card>
-      <card filmList="{{terrorFilm}}" type="{{terror}}"></card>
-      <card filmList="{{strangeFilm}}" type="{{strange}}"></card>
-      <card filmList="{{featureFilm}}" type="{{feature}}"></card>
+      <card filmList="{{fightFilm}}" type="{{fight}}" cid="{{cid5}}"></card>
+      <card filmList="{{comedyFilm}}" type="{{comedy}}" cid="{{cid6}}"></card>
+      <card filmList="{{loveFilm}}" type="{{love}}" cid="{{cid7}}"></card>
+      <card filmList="{{sciencFilm}}" type="{{scienc}}" cid="{{cid8}}"></card>
+      <card filmList="{{terrorFilm}}" type="{{terror}}" cid="{{cid9}}"></card>
+      <card filmList="{{strangeFilm}}" type="{{strange}}" cid="{{cid10}}"></card>
+      <card filmList="{{featureFilm}}" type="{{feature}}" cid="{{cid11}}"></card>
     </van-tab>
-    <van-tab title="电视剧">内容 2</van-tab>
-    <van-tab title="动漫">内容 3</van-tab>
-    <van-tab title="综艺">内容 4</van-tab>
-    <van-tab title="纪录片">内容 5</van-tab>
-    <van-tab title="战争片">内容 6</van-tab>
+    <van-tab title="电视剧">
+      <card filmList="{{contryTV}}" type="{{contry}}" cid="{{cid12}}"></card>
+      <card filmList="{{xianggangTV}}" type="{{xianggang}}" cid="{{cid13}}"></card>
+      <card filmList="{{taiwanTV}}" type="{{taiwan}}" cid="{{cid14}}"></card>
+      <card filmList="{{koreaTV}}" type="{{korea}}" cid="{{cid15}}"></card>
+      <card filmList="{{japanTV}}" type="{{japan}}" cid="{{cid16}}"></card>
+      <card filmList="{{oumeiTV}}" type="{{oumei}}" cid="{{cid17}}"></card>
+    </van-tab>
+    <van-tab title="动漫">
+      <card filmList="{{guochanAnime}}" type="{{guochanA}}" cid="{{cid91}}"></card>
+      <card filmList="{{japanAnime}}" type="{{japanA}}" cid="{{cid92}}"></card>
+      <card filmList="{{oumeiAnime}}" type="{{oumeiA}}" cid="{{cid93}}"></card>
+      <card filmList="{{qitaAnime}}" type="{{qitaA}}" cid="{{cid94}}"></card>
+    </van-tab>
+    <van-tab title="综艺">
+      <card filmList="{{daluZY}}" type="{{daluZ}}" cid="{{cid96}}"></card>
+      <card filmList="{{guowaiZY}}" type="{{guowaiZ}}" cid="{{cid97}}"></card>
+      <card filmList="{{gangtaiZY}}" type="{{gangtaiZ}}" cid="{{cid98}}"></card>
+    </van-tab>
+    <van-tab title="其他">
+      <card filmList="{{recordOther}}" type="{{record}}" cid="{{cid99}}"></card>
+      <card filmList="{{animeOther}}" type="{{anime}}" cid="{{cid100}}"></card>
+      <card filmList="{{warOther}}" type="{{war}}" cid="{{cid101}}"></card>
+    </van-tab>
   </van-tabs>
 </view>

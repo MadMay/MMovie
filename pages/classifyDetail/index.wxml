@@ -1,0 +1,9 @@
+<!--pages/classifyDetail/index.wxml-->
+<photos collectionList="{{result}}" ></photos>
+<van-divider
+  wx:if="{{getMore}}"
+  contentPosition="center"
+  customStyle="color: #1989fa; border-color: #1989fa; font-size: 26rpx;"
+  >
+  {{tips}}
+</van-divider>

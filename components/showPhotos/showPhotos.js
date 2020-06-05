@@ -29,7 +29,7 @@ Component({
 
   },
   attached(){
-    console.log(this.data.isHis)
+    //console.log(this.data.isHis)
   },
   /**
    * 组件的方法列表
@@ -43,7 +43,7 @@ Component({
       let type = this.properties.type
       let data = wx.getStorageSync(type) || []
       let index = this.properties.collectionList.findIndex(item => item.vod_name == wd)
-      console.log(index)
+      //console.log(index)
       data.splice(index, 1)
       this.properties.collectionList.splice(index, 1)
       this.setData({

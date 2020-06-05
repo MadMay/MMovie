@@ -1,1 +1,2 @@
-<photos collectionList="{{collectionList}}" type="collect"></photos>
+<photos wx:if="{{isLoading}}" collectionList="{{collectionList}}" type="collect" bindmyevent="onMyEvent"></photos>
+<view wx:else>{{tips}}</view>

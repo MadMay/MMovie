@@ -18,7 +18,7 @@
 		<navigator class="collect_box" url="/pages/collection/index">
 			<view class="left">
 				<image class="imgIcon"  mode="widthFix" src="../../icons/收藏.png"></image>
-				<text>我的看单</text> 
+				<text>我的收藏</text> 
 			</view>
 			<text class="iconfont icon-icon-test"></text>
 		</navigator>
@@ -42,6 +42,6 @@
     </view>
  
     <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
-        授权登录
+        微信登录
     </button>
 </view>

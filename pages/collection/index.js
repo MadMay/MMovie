@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    collectionList: []
+    collectionList: [],
+    isLoading:true,
+    tips:'数据查询中...'
   },
 
   /**
@@ -26,6 +28,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.setData({
+      isLoading:false,
+      tips:'数据查询中...'
+    })
     let collect = wx.getStorageSync("collect") || [];
     let result = [];
     let collectionList=[];
@@ -45,12 +51,18 @@ Page({
      
      this.setData({
       collectionList,
+      isLoading:true,
+      tips:'还没有收藏哦，赶紧去收藏几部电影吧。'
      })
    
     });
-
   },
-
+  onMyEvent: function(){
+    this.setData({
+      isLoading:false,
+      tips:'还没有收藏哦，赶紧去收藏几部电影吧。'
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

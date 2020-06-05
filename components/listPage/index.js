@@ -11,6 +11,10 @@ Component({
     type:{
       type:String,
       value:'',
+    },
+    cid:{
+      type:Number,
+      value:1,
     }
   },
 

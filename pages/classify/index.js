@@ -7,6 +7,8 @@ Page({
    */
   data: {
     active:0,
+    fight: "动作电影",
+    comedy:"喜剧电影",
     love:'爱情电影',
     scienc:'科幻电影',
     terror:'恐怖电影',
@@ -20,7 +22,42 @@ Page({
     strangeFilm:[],//奇幻
     featureFilm:[],//剧情
   },
-  
+  //加载其他tab页数据
+  indexArr:[0],//tab页面是否加载
+  loadOtherData(e){
+    //console.log(this.indexArr)
+    var flag = this.indexArr.includes(e.detail.index);
+    //console.log(flag)
+    if(!flag&&e.detail.title=="电视剧"){
+      this.indexArr.push(e.detail.index)
+      this.getFilmData7()
+      this.getFilmData8()
+      this.getFilmData9()
+      this.getFilmData10()
+      this.getFilmData11()
+      this.getFilmData12()
+    }
+    else if(!flag&&e.detail.title=="动漫"){
+      this.indexArr.push(e.detail.index);
+      this.getFilmData13()
+      this.getFilmData14()
+      this.getFilmData15()
+      this.getFilmDataOther()
+    }
+    else if(!flag&&e.detail.title=="综艺"){
+      this.indexArr.push(e.detail.index)
+      this.getFilmData16()
+      this.getFilmData17()
+      this.getFilmData18()
+    }
+    else if(!flag&&e.detail.title=="其他"){
+      this.indexArr.push(e.detail.index)
+      this.getFilmData19()
+      this.getFilmData20()
+      this.getFilmData21()
+    }
+    else{}
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -30,6 +67,7 @@ Page({
     this.setData({
       fightFilm:data,
       fight: "动作电影",
+      cid5:5,
     })
   },
   async getFilmData1(){
@@ -37,6 +75,7 @@ Page({
     this.setData({
       comedyFilm:data,
       comedy:"喜剧电影",
+      cid6:6,
     })
   },
   async getFilmData2(){
@@ -44,6 +83,7 @@ Page({
     this.setData({
       loveFilm:data,
       love:"爱情电影",
+      cid7:7,
     })
   },
   async getFilmData3(){
@@ -51,6 +91,7 @@ Page({
     this.setData({
       sciencFilm:data,
       scienc:"科幻电影",
+      cid8:8,
     })
   },
   async getFilmData4(){
@@ -58,6 +99,7 @@ Page({
     this.setData({
       terrorFilm:data,
       terror:"恐怖电影",
+      cid9:9,
     })
   },
   async getFilmData5(){
@@ -65,6 +107,7 @@ Page({
     this.setData({
       strangeFilm:data,
       strange:"奇幻电影",
+      cid10:10,
     })
   },
   async getFilmData6(){
@@ -72,6 +115,139 @@ Page({
     this.setData({
       featureFilm:data,
       feature:"喜剧电影",
+      cid11:11,
+    })
+  },
+  //电视剧
+  async getFilmData7(){
+    const {data} =  await request({query:"?cid=12"});
+    this.setData({
+      contryTV:data,
+      contry:"内地剧",
+      cid12:12,
+    })
+  },
+  async getFilmData8(){
+    const {data} =  await request({query:"?cid=13"});
+    this.setData({
+      xianggangTV:data,
+      xianggang:"香港剧",
+      cid13:13,
+    })
+  },
+  async getFilmData9(){
+    const {data} =  await request({query:"?cid=14"});
+    this.setData({
+      taiwanTV:data,
+      taiwan:"台湾剧",
+      cid14:14,
+    })
+  },
+  async getFilmData10(){
+    const {data} =  await request({query:"?cid=15"});
+    this.setData({
+      koreaTV:data,
+      korea:"韩剧",
+      cid15:15,
+    })
+  },
+  async getFilmData11(){
+    const {data} =  await request({query:"?cid=16"});
+    this.setData({
+      japanTV:data,
+      japan:"日剧",
+      cid16:16,
+    })
+  },
+  async getFilmData12(){
+    const {data} =  await request({query:"?cid=17"});
+    this.setData({
+      oumeiTV:data,
+      oumei:"美剧",
+      cid17:17,
+    })
+  },
+  //动漫
+  async getFilmData13(){
+    const {data} =  await request({query:"?cid=91"});
+    this.setData({
+      guochanAnime:data,
+      guochanA:"国产动漫",
+      cid91:91
+    })
+  },
+  async getFilmData14(){
+    const {data} =  await request({query:"?cid=92"});
+    this.setData({
+      japanAnime:data,
+      japanA:"日本动漫",
+      cid92:92
+    })
+  },
+  async getFilmData15(){
+    const {data} =  await request({query:"?cid=93"});
+    this.setData({
+      oumeiAnime:data,
+      oumeiA:"欧美动漫",
+      cid93:93
+    })
+  },
+  async getFilmDataOther(){
+    const {data} =  await request({query:"?cid=94"});
+    this.setData({
+      qitaAnime:data,
+      qitaA:"其他动漫",
+      cid94:94
+    })
+  },
+  //综艺
+  async getFilmData16(){
+    const {data} =  await request({query:"?cid=96"});
+    this.setData({
+      daluZY:data,
+      daluZ:"大陆综艺",
+      cid96:96
+    })
+  },
+  async getFilmData17(){
+    const {data} =  await request({query:"?cid=97"});
+    this.setData({
+      guowaiZY:data,
+      guowaiZ:"国外综艺",
+      cid97:97
+    })
+  },
+  async getFilmData18(){
+    const {data} =  await request({query:"?cid=98"});
+    this.setData({
+      gangtaiZY:data,
+      gangtaiZ:"港台综艺",
+      cid98:98
+    })
+  },
+  //其他
+  async getFilmData19(){
+    const {data} =  await request({query:"?cid=99"});
+    this.setData({
+      recordOther:data,
+      record:"纪录片",
+      cid99:99
+    })
+  },
+  async getFilmData20(){
+    const {data} =  await request({query:"?cid=100"});
+    this.setData({
+      animeOther:data,
+      anime:"动画片",
+      cid100:100
+    })
+  },
+  async getFilmData21(){
+    const {data} =  await request({query:"?cid=101"});
+    this.setData({
+      warOther:data,
+      war:"战争片",
+      cid101:101
     })
   },
   onLoad: function (options) {
@@ -133,6 +309,6 @@ Page({
 
   },
   doSomeThing(e){
-    console.log("滑动...",e)
+    //console.log("滑动...",e)
   }
 })

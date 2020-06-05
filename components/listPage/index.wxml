@@ -2,17 +2,17 @@
 <view class="film">
   <view class="item-opt">
     <view class="item-title">{{type}}</view>
-    <view class="viewMore">
+    <navigator url="/pages/classifyDetail/index?cid={{cid}}&type={{type}}" class="viewMore">
       <text style="font-weight:500;margin-right:10rpx">查看更多</text>
       <text>></text>
-    </view>
+    </navigator>
   </view>
-  <scroll-view class="cardArea" catchtouchmove="true" scroll-x scroll-y>
+  <scroll-view class="cardArea" scroll-x>
     <navigator 
     url="/pages/detail/index?wd={{item.vod_name}}"
     class="cardItem" 
     wx:for="{{filmList}}" 
-    wx:key="item.vod_id" 
+    wx:key="vod_id" 
     bindtap="goDetail" 
     data-name="{{item.vod_name}}">
       <van-image

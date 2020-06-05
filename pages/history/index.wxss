@@ -1,4 +1,5 @@
 .handleBtn{
   text-align: right;
   padding-bottom: 10rpx;
+  margin: 10rpx;
 }

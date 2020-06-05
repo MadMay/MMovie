@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "photos":"../../components/showPhotos/showPhotos",
+    "van-divider": "@vant/weapp/divider/index"
+  },
+  "navigationBarTitleText": "加载中..."
+}

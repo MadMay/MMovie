@@ -117,7 +117,7 @@ Page({
       Toast.success('收藏成功！')
     } else {
       collect.splice(this.data.index, 1)
-      Toast.success('已取消收藏！')
+      Toast.success('已取消！')
     }
     wx.setStorage({
       key: "collect",
