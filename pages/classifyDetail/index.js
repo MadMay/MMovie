@@ -9,9 +9,9 @@ Page({
     cid:0,//数据类型
     type:"",//数据类型中文名
     result:[],//数据
-    getMore:false,
-    pageCount:1,//数据总页数
-    canload:false,//能否加载更多
+    pageCount:0,//数据总页数
+    canload:true,//能否加载更多
+    tips:'上滑加载更多...'
   },
    /**
    * 页面上拉触底事件的处理函数
@@ -42,8 +42,8 @@ Page({
   page:0,//页码
   newDataArr:[],//查询数据，多次查询都存在这里。
   async getData(){
-    ++this.page
-    if(this.page>this.data.pageCount){
+    ++this.page;
+    if(this.page==this.data.pageCount){
       this.setData({
         tips:'没有更多内容了。',
         canload:false
@@ -53,15 +53,19 @@ Page({
     const {data,page} =  await request({query:"?cid="+this.data.cid+"&p="+this.page})
     //console.log(data)
     this.newDataArr.push(...data)
-        this.setData({
-          result:this.newDataArr,
-          pageCount:page.pagecount,
-          canload:true,
-          getMore:true,
-          tips:'上滑加载更多...'
-        })
+    this.setData({
+      result:this.newDataArr,
+      pageCount:page.pagecount,
+      canload:true,
+      tips:'上滑加载更多...'
+    })
+    if(this.data.pageCount==1){
+      this.setData({
+        canload:false,
+        tips:'没有更多内容了'
+      })
+    }
     },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

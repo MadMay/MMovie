@@ -7,6 +7,11 @@ Page({
    */
   data: {
     active:0,
+    film:false,
+    TV:false,
+    Anime:false,
+    Zongyi:false,
+    Qita:false,
     fight: "动作电影",
     comedy:"喜剧电影",
     love:'爱情电影',
@@ -22,14 +27,41 @@ Page({
     strangeFilm:[],//奇幻
     featureFilm:[],//剧情
   },
+  onTabItemTap: function(){
+    if (!this.data.film){
+      //this.indexArr = this.indexArr.filter(res=>res!="电影")
+      this.getFilmData();
+      this.getFilmData1()
+      this.getFilmData2()
+      this.getFilmData3()
+      this.getFilmData4()
+      this.getFilmData5()
+      this.getFilmData6()
+    }
+    else if(!this.data.TV){
+      this.indexArr = this.indexArr.filter(res=>res!="电视剧")
+    }
+    else if(!this.data.Anime){
+      this.indexArr = this.indexArr.filter(res=>res!="动漫")
+    }
+    else if(!this.data.Zongyi){
+      this.indexArr = this.indexArr.filter(res=>res!="综艺")
+    }
+    else if(!this.data.Qita){
+      this.indexArr = this.indexArr.filter(res=>res!="其他")
+    }
+    else{
+      return
+    }
+  },
   //加载其他tab页数据
-  indexArr:[0],//tab页面是否加载
+  indexArr:["电影"],//tab页面是否加载
   loadOtherData(e){
     //console.log(this.indexArr)
-    var flag = this.indexArr.includes(e.detail.index);
+    var flag = this.indexArr.includes(e.detail.title);
     //console.log(flag)
     if(!flag&&e.detail.title=="电视剧"){
-      this.indexArr.push(e.detail.index)
+      this.indexArr.push(e.detail.title)
       this.getFilmData7()
       this.getFilmData8()
       this.getFilmData9()
@@ -38,25 +70,33 @@ Page({
       this.getFilmData12()
     }
     else if(!flag&&e.detail.title=="动漫"){
-      this.indexArr.push(e.detail.index);
+      this.indexArr.push(e.detail.title);
       this.getFilmData13()
       this.getFilmData14()
       this.getFilmData15()
       this.getFilmDataOther()
     }
     else if(!flag&&e.detail.title=="综艺"){
-      this.indexArr.push(e.detail.index)
+      this.indexArr.push(e.detail.title)
       this.getFilmData16()
       this.getFilmData17()
       this.getFilmData18()
     }
     else if(!flag&&e.detail.title=="其他"){
-      this.indexArr.push(e.detail.index)
+      this.indexArr.push(e.detail.title)
       this.getFilmData19()
       this.getFilmData20()
       this.getFilmData21()
     }
-    else{}
+    else if(!flag&&e.detail.title=="电影"){
+      this.getFilmData();
+      this.getFilmData1()
+      this.getFilmData2()
+      this.getFilmData3()
+      this.getFilmData4()
+      this.getFilmData5()
+      this.getFilmData6()
+    }
   },
   /**
    * 生命周期函数--监听页面加载
@@ -68,6 +108,7 @@ Page({
       fightFilm:data,
       fight: "动作电影",
       cid5:5,
+      film:true,
     })
   },
   async getFilmData1(){
@@ -125,6 +166,7 @@ Page({
       contryTV:data,
       contry:"内地剧",
       cid12:12,
+      TV:true,
     })
   },
   async getFilmData8(){
@@ -173,7 +215,8 @@ Page({
     this.setData({
       guochanAnime:data,
       guochanA:"国产动漫",
-      cid91:91
+      cid91:91,
+      Anime:true,
     })
   },
   async getFilmData14(){
@@ -206,7 +249,8 @@ Page({
     this.setData({
       daluZY:data,
       daluZ:"大陆综艺",
-      cid96:96
+      cid96:96,
+      Zongyi:true,
     })
   },
   async getFilmData17(){
@@ -231,7 +275,8 @@ Page({
     this.setData({
       recordOther:data,
       record:"纪录片",
-      cid99:99
+      cid99:99,
+      Qita:true
     })
   },
   async getFilmData20(){

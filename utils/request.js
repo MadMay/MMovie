@@ -12,6 +12,9 @@ export const request = (params)=>{
     }
     wx.request({
       ...params,
+      header:{
+        "Content-Type":"application/x-www-form-urlencoded"
+      },
       url: baseUrl+params.query,
       success:(result)=>{
         times -- 
@@ -29,7 +32,6 @@ export const request = (params)=>{
           icon:'none',
           duration:1000
         })
-        
       }
     })
   })

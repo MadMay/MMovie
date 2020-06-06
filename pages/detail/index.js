@@ -78,6 +78,7 @@ Page({
     let all = `${list_name}/${vod_language}/${vod_year}`;
  
     let playUrl = []
+    //分集
      vod_url.split('\n').forEach(element => {
          let name = element.split('$')[0]
          let url = element.split('$')[1]
@@ -99,12 +100,13 @@ Page({
       isShow: !this.data.isShow,
     });
   },
+  //收藏相关操作
   collect() {
-    let collect = wx.getStorageSync("collect") || [];
-    let userName = wx.getStorageSync('userInfo')||"未登录"
+    let collect = wx.getStorageSync("collect") || [];//获取已收藏数
+    let userName = wx.getStorageSync('userInfo')||"未登录"//获取是否微信授权
     //console.log(userName)
     if(userName=="未登录"){
-      Toast.fail('请登录后收藏！')
+      Toast.fail('请先登录')
     return
     }
     if (!this.data.isCollection) {
@@ -114,10 +116,10 @@ Page({
         name: this.data.wd,
         vod_pic:this.data.listData.vod_pic
       });
-      Toast.success('收藏成功！')
+      Toast.success('收藏成功')
     } else {
       collect.splice(this.data.index, 1)
-      Toast.success('已取消！')
+      Toast.success('已取消')
     }
     wx.setStorage({
       key: "collect",
@@ -127,6 +129,7 @@ Page({
       isCollection: !this.data.isCollection,
     });
   },
+  //播放
   handleBtn(e){
     let {index, name} = e.currentTarget.dataset
     console.log(index,name)
