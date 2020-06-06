@@ -2,5 +2,5 @@
   "usingComponents": {
     "photos":"../../components/showPhotos/showPhotos"
   },
-  "navigationBarTitleText": " "
+  "navigationBarTitleText": "我的收藏"
 }

@@ -20,5 +20,5 @@
 <img src="/mdPage/IMG_2824.PNG">
 <img src="/mdPage/IMG_2825.PNG">
 <img src="/mdPage/IMG_2826.PNG">
-<h3>后续有时间会继续完善....</h3>
+<h3>后续会继续完善....</h3>
 
