@@ -15,11 +15,11 @@
   <li>视频倍速播放</li>
 </ol>
 <h3>项目部分截图</h3>
-<img width="300" height="580" src="/mdPage/IMG_2820.PNG">
-<img width="300" height="580" src="/mdPage/IMG_2821.PNG">
-<img width="300" height="580" src="/mdPage/IMG_2822.PNG">
-<img width="300" height="580" src="/mdPage/IMG_2824.PNG">
-<img width="300" height="580" src="/mdPage/IMG_2825.PNG">
-<img width="300" height="580" src="/mdPage/IMG_2826.PNG">
+<img width="300" height="580" src="/mdPage/IMG_2820.PNG" style="display:inline-block">
+<img width="300" height="580" src="/mdPage/IMG_2821.PNG" style="display:inline-block">
+<img width="300" height="580" src="/mdPage/IMG_2822.PNG" style="display:inline-block">
+<img width="600" height="320" src="/mdPage/IMG_2824.PNG" style="display:inline-block">
+<img width="300" height="580" src="/mdPage/IMG_2825.PNG" style="display:inline-block">
+<img width="300" height="580" src="/mdPage/IMG_2826.PNG" style="display:inline-block">
 <h3>后续会继续完善....</h3>
 
