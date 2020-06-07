@@ -5,6 +5,10 @@ page{
 video{
   width: 100%;
 }
+.over{
+  position: relative;
+  overflow-x: hidden;
+}
 .countinu{
   position: absolute;
   background-color: rgba(0,0,0,0.6);

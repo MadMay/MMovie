@@ -1,5 +1,5 @@
 {
-  "name": "seefor",
+  "name": "Mmovie",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
@@ -12,16 +12,5 @@
     "regenerator-runtime": "^0.13.5",
     "weui": "^2.3.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chimu23/wxseefor.git"
-  },
-  "keywords": [
-    "123"
-  ],
-  "bugs": {
-    "url": "https://github.com/chimu23/wxseefor/issues"
-  },
-  "homepage": "https://github.com/chimu23/wxseefor#readme",
   "description": ""
 }

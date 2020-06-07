@@ -1,38 +1,40 @@
-<view class="hisPlay" wx:if="{{isHis}}">
-  <video  src="{{url}}" 
-  show-mute-btn autoplay controls show-casting-button 
-  id="video" 
-  bindtimeupdate="timeupdate" 
-  initial-time="{{hisTime}}" 
-  title="{{wd+level}}"
-  bindtap="showMenu"
-  bindloadedmetadata="showHisTip"></video>
-  <cover-view class="countinu" style="display:flex" wx:if="{{continue}}">
-    <cover-view class="texttip">检测到历史播放，已为您续播</cover-view>
-  </cover-view>
-  <cover-view class="rateBtn" bindtap="translateX"  animation="{{animationMenu}}">
-    <cover-view class="numb">{{rate}}</cover-view>
-  </cover-view>
-  <cover-view class="rate" bindtap="choseRate" animation="{{animation}}">
-    <cover-view class="numb"  data-rate="0.5">x0.5</cover-view>
-    <cover-view class="numb"  data-rate="1">x1</cover-view>
-    <cover-view class="numb"  data-rate="1.25">x1.25</cover-view>
-    <cover-view class="numb"  data-rate="1.5">x1.5</cover-view>
-  </cover-view>
-</view>
-<view class="hisPlay" wx:else >
-  <video src="{{url}}"
-   show-mute-btn autoplay controls show-casting-button id="video" 
-   bindtimeupdate="timeupdate"
-   bindtap="showMenu"  
-   title="{{wd+level}}"></video>
-  <cover-view class="rateBtn" bindtap="translateX"  animation="{{animationMenu}}">
-    <cover-view class="numb">{{rate}}</cover-view>
-  </cover-view>
-  <cover-view class="rate" bindtap="choseRate" animation="{{animation}}">
-    <cover-view class="numb" data-rate="0.5">x0.5</cover-view>
-    <cover-view class="numb" data-rate="1">x1</cover-view>
-    <cover-view class="numb" data-rate="1.25">x1.25</cover-view>
-    <cover-view class="numb" data-rate="1.5">x1.5</cover-view>
-  </cover-view>
+<view class="over">
+  <view class="hisPlay" wx:if="{{isHis}}">
+    <video  src="{{url}}" 
+    show-mute-btn autoplay controls show-casting-button 
+    id="video" 
+    bindtimeupdate="timeupdate" 
+    initial-time="{{hisTime}}" 
+    title="{{wd+level}}"
+    bindtap="showMenu"
+    bindloadedmetadata="showHisTip"></video>
+    <cover-view class="countinu" style="display:flex" wx:if="{{continue}}">
+      <cover-view class="texttip">检测到历史播放，已为您续播</cover-view>
+    </cover-view>
+    <cover-view class="rateBtn" bindtap="translateX"  animation="{{animationMenu}}">
+      <cover-view class="numb">{{rate}}</cover-view>
+    </cover-view>
+    <cover-view class="rate" bindtap="choseRate" animation="{{animation}}">
+      <cover-view class="numb"  data-rate="0.5">x0.5</cover-view>
+      <cover-view class="numb"  data-rate="1">x1</cover-view>
+      <cover-view class="numb"  data-rate="1.25">x1.25</cover-view>
+      <cover-view class="numb"  data-rate="1.5">x1.5</cover-view>
+    </cover-view>
+  </view>
+  <view class="hisPlay" wx:else >
+    <video src="{{url}}"
+    show-mute-btn autoplay controls show-casting-button id="video" 
+    bindtimeupdate="timeupdate"
+    bindtap="showMenu"  
+    title="{{wd+level}}"></video>
+    <cover-view class="rateBtn" bindtap="translateX"  animation="{{animationMenu}}">
+      <cover-view class="numb">{{rate}}</cover-view>
+    </cover-view>
+    <cover-view class="rate" bindtap="choseRate" animation="{{animation}}">
+      <cover-view class="numb" data-rate="0.5">x0.5</cover-view>
+      <cover-view class="numb" data-rate="1">x1</cover-view>
+      <cover-view class="numb" data-rate="1.25">x1.25</cover-view>
+      <cover-view class="numb" data-rate="1.5">x1.5</cover-view>
+    </cover-view>
+  </view>
 </view>
