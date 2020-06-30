@@ -3,7 +3,7 @@
 # ############
 后端接口用的<a href="http://bajiezy.cc/help/">http://bajiezy.cc/help/</a>
 # 在线体验请扫这个二维码 
-<img width="300" height="300",src="https://6b6b-kkmovie-36qwj-1302490860.tcb.qcloud.la/QQ%E5%9B%BE%E7%89%8720200630173827.jpg?sign=a40c537b1030697e9c8a08f4b15bc211&t=1593510324" style="display:inline-block">
+<img width="300" height="300" src="https://6b6b-kkmovie-36qwj-1302490860.tcb.qcloud.la/QQ%E5%9B%BE%E7%89%8720200630173827.jpg?sign=a40c537b1030697e9c8a08f4b15bc211&t=1593510324">
 <h3>目前已经拥有的功能有：</h3>
 <ol>
   <li>微信登录</li>
